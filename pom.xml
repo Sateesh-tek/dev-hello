@@ -36,6 +36,12 @@
 						<applicationName>helloApp</applicationName>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
+						<server>ExchangeRepository</server>
+		                <properties>
+							<anypoint.platform.client_id>${app.anypoint.platform.client_id}</anypoint.platform.client_id>
+							<anypoint.platform.client_secret>${app.anypoint.platform.client_secret}</anypoint.platform.client_secret>
+                			<env>${app.env}</env>
+                			</properties>
 					</cloudHubDeployment>
 				</configuration>
 
