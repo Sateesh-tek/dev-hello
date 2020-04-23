@@ -27,15 +27,15 @@
 				<configuration>
 					<cloudHubDeployment>
 						<uri>https://anypoint.mulesoft.com</uri>
-						<muleVersion>${mule.version}</muleVersion>
+						<muleVersion>4.2.2</muleVersion>
 						<!-- Deploy User Parameter -->
-						<username>${anypoint.username}</username>
-						<password>${anypoint.password}</password>
+						<username>aprl2020</username>
+						<password>Teksystems123</password>
 						<!-- Environment Parameter -->
-						<environment>${cloudhub.environment}</environment>
-						<applicationName>${cloudhub.app}</applicationName>
+						<environment>Sandbox</environment>
+						<applicationName>hello</applicationName>
 						<businessGroup>${cloudhub.bg}</businessGroup>
-						<workerType>${cloudhub.worker}</workerType>
+						<workerType>1</workerType>
 					</cloudHubDeployment>
 				</configuration>
 
