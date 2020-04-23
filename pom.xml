@@ -34,8 +34,8 @@
 						<!-- Environment Parameter -->
 						<environment>Sandbox</environment>
 						<applicationName>helloworld</applicationName>
-						<businessGroup>${cloudhub.bg}</businessGroup>
-						<workerType>1</workerType>
+						<workers>1</workers>
+						<workerType>Micro</workerType>
 					</cloudHubDeployment>
 				</configuration>
 
