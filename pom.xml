@@ -45,21 +45,7 @@
 					</cloudHubDeployment>
 				</configuration>
 
-			
-				<executions>
-					<execution>
-						<phase>initialize</phase>
-						<goals>
-							<goal>read-project-properties</goal>
-						</goals>
-						<configuration>
-							<files>
-								<file>${maven.properties}</file>
-							</files>
-						</configuration>
-					</execution>
-				</executions>
-			 </plugin>
+			</plugin>
 		</plugins>
 	</build>
 
