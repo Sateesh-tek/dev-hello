@@ -49,7 +49,7 @@
 
 			</plugin>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
+				<groupId>7022d1b4-4181-4f91-9984-b3d4146702b3</groupId>
 				<artifactId>properties-maven-plugin</artifactId>
 				<version>1.0.0</version>
 				<executions>
