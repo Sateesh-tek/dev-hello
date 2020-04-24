@@ -13,7 +13,6 @@
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-
 		<app.runtime>4.2.2</app.runtime>
 		<mule.maven.plugin.version>3.3.5</mule.maven.plugin.version>
 	</properties>
@@ -48,25 +47,6 @@
 				</configuration>
 
 			</plugin>
-			<plugin>
-			<!-- 	<groupId>7022d1b4-4181-4f91-9984-b3d4146702b3</groupId> -->
-				<artifactId>properties-maven-plugin</artifactId>
-				<version>1.0.0</version>
-				<executions>
-					<execution>
-						<phase>initialize</phase>
-						<goals>
-							<goal>read-project-properties</goal>
-						</goals>
-						<configuration>
-							<files>
-								<file>${maven.properties}</file>
-							</files>
-						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
 		</plugins>
 	</build>
 
@@ -91,15 +71,6 @@
 		</dependency>
 	</dependencies>
 
-	<distributionManagement>
-		<repository>
-			<id>ExchangeRepository</id>
-			<name>Corporate Repository</name>
-			<url>https://maven.anypoint.mulesoft.com/api/v1/organizations/${project.groupId}/maven</url>
-			<layout>default</layout>
-		</repository>
-
-	</distributionManagement>
 
 
 	<repositories>
@@ -133,5 +104,14 @@
 			</snapshots>
 		</pluginRepository>
 	</pluginRepositories>
+
+	<distributionManagement>
+		<repository>
+			<id>ExchangeRepository</id>
+			<name>Corporate Repository</name>
+			<url>https://maven.anypoint.mulesoft.com/api/v1/organizations/${project.groupId}/maven</url>
+			<layout>default</layout>
+		</repository>
+	</distributionManagement>
 
 </project>
