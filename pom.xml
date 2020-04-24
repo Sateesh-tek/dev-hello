@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>7022d1b4-4181-4f91-9984-b3d4146702b3</groupId>
@@ -37,15 +38,35 @@
 						<workers>1</workers>
 						<workerType>Micro</workerType>
 						<server>ExchangeRepository</server>
-		                <properties>
+						<properties>
 							<anypoint.platform.client_id>${app.anypoint.platform.client_id}</anypoint.platform.client_id>
 							<anypoint.platform.client_secret>${app.anypoint.platform.client_secret}</anypoint.platform.client_secret>
-                			<env>${app.env}</env>
-                			</properties>
+							<env>${app.env}</env>
+						</properties>
 					</cloudHubDeployment>
+					<classifier>mule-application-example</classifier>
 				</configuration>
 
 			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>properties-maven-plugin</artifactId>
+				<version>1.0.0</version>
+				<executions>
+					<execution>
+						<phase>initialize</phase>
+						<goals>
+							<goal>read-project-properties</goal>
+						</goals>
+						<configuration>
+							<files>
+								<file>${maven.properties}</file>
+							</files>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+
 		</plugins>
 	</build>
 
@@ -63,12 +84,12 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
-            <groupId>org.mule.connectors</groupId>
-            <artifactId>mule-wsc-connector</artifactId>
-            <version>1.5.1</version>
-            <classifier>mule-plugin</classifier>
-        </dependency>
-    </dependencies>
+			<groupId>org.mule.connectors</groupId>
+			<artifactId>mule-wsc-connector</artifactId>
+			<version>1.5.1</version>
+			<classifier>mule-plugin</classifier>
+		</dependency>
+	</dependencies>
 
 	<distributionManagement>
 		<repository>
@@ -93,6 +114,12 @@
 			<url>https://repository.mulesoft.org/releases/</url>
 			<layout>default</layout>
 		</repository>
+		<repository>
+      <id>Repository</id>
+      <name>Corporate Repository</name>
+      <url>https://maven.eu1.anypoint.mulesoft.com/api/v1/organizations/7022d1b4-4181-4f91-9984-b3d4146702b3/maven</url>
+      <layout>default</layout>
+    </repository>
 	</repositories>
 	<pluginRepositories>
 		<pluginRepository>
