@@ -75,8 +75,9 @@
 
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.7</version>
+				<artifactId>properties-maven-plugin</artifactId>
+	<version>1.0.0</version>
+
 				<executions>
 					<execution>
 						<phase>initialize</phase>
