@@ -30,7 +30,7 @@
 						<uri>https://anypoint.mulesoft.com</uri>
 						<muleVersion>4.2.2</muleVersion>
 						<!-- Deploy User Parameter -->
-						<username>aprl2020@Sandbox</username>
+						<username>aprl2020</username>
 						<password>Teksystems123</password>
 						<!-- Environment Parameter -->
 						<environment>Sandbox</environment>
