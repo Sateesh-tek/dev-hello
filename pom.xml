@@ -37,7 +37,7 @@
 						<applicationName>helloApp</applicationName>
 						<workers>1</workers>
 						<workerType>Micro</workerType>
-						<server>ExchangeRepository</server>
+						<server>MuleRepository</server>
 						<properties>
 							<anypoint.platform.client_id>${app.anypoint.platform.client_id}</anypoint.platform.client_id>
 							<anypoint.platform.client_secret>${app.anypoint.platform.client_secret}</anypoint.platform.client_secret>
@@ -48,15 +48,15 @@
 				</configuration>
 			</plugin>
 			<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-install-plugin</artifactId>
-    <version>2.5.2</version>
-</plugin>
-<plugin>
-    <groupId>org.apache.maven.plugins</groupId>
-    <artifactId>maven-deploy-plugin</artifactId>
-    <version>2.8.2</version>
-</plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-install-plugin</artifactId>
+				<version>2.5.2</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.8.2</version>
+			</plugin>
 			<plugin>
 				<groupId>com.mulesoft.munit.tools</groupId>
 				<artifactId>munit-maven-plugin</artifactId>
